@@ -8,6 +8,7 @@ import { ListPage } from '../pages/list/list';
 import { LoginPage } from '../pages/login/login';
 
 import Auth0Cordova from '@auth0/cordova';
+import { ContactPage } from '../pages/contact/contact';
 
 @Component({
   templateUrl: 'app.html'
@@ -28,7 +29,8 @@ export class MyApp {
     this.pages = [
       { title: 'Home', component: HomePage },
       { title: 'List', component: ListPage },
-      { title: 'Entre ou autentique-se', component: LoginPage}
+      { title: 'Entre ou autentique-se', component: LoginPage},
+      { title: 'Contato', component: ContactPage}
     ];
 
   }

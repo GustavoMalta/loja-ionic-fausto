@@ -14,8 +14,12 @@ import { LoginPage } from './../pages/login/login';
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 
-import { HttpClientModule } from '@angular/common/http'
+import { HttpClientModule } from '@angular/common/http';
 import { ProdutoService } from './../services/produto';
+import { ContactPageModule } from '../pages/contact/contact.module';
+import { ContactFormService } from '../services/contact-form-service';
+import { ThankyouPageModule } from '../pages/thankyou/thankyou.module';
+import { DetailsPageModule } from '../pages/details/details.module';
 
 
 @NgModule({
@@ -29,7 +33,10 @@ import { ProdutoService } from './../services/produto';
     BrowserModule,
     HttpClientModule,
     IonicModule.forRoot(MyApp),
-    IonicStorageModule.forRoot()
+    IonicStorageModule.forRoot(),
+    DetailsPageModule,
+    ContactPageModule,
+    ThankyouPageModule
   ],
   bootstrap: [IonicApp],
   entryComponents: [
@@ -43,7 +50,8 @@ import { ProdutoService } from './../services/produto';
     SplashScreen,
     ProdutoService,
     {provide: ErrorHandler, useClass: IonicErrorHandler},
-    AuthService
+    AuthService,
+    ContactFormService
   ]
 })
 export class AppModule {}
