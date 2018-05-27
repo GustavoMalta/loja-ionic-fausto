@@ -22,7 +22,8 @@ export class HomePage implements OnInit {
   ) {
     
   }
-
+  ngOnInit() {}
+  
   ionViewDidEnter () {    
     this.ps.listarProdutos().subscribe(
       dados => this.produtos = dados,
