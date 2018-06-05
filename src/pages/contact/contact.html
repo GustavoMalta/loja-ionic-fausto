@@ -6,11 +6,11 @@
   </ion-navbar>
 </ion-header>
 
-<ion-content>
+<ion-content >
+
   <p class="center">
      <ion-icon class="large-lighter" primary name="contact"></ion-icon>
-  </p>
-
+  </p>  
   <form #f="ngForm" novalidate (ngSubmit)="onSubmit(f)">
      <ion-list>
 
@@ -58,16 +58,14 @@
            <ion-label item-right>Concordo com os termos e condições</ion-label>
         </ion-item>
 
-        <div [hidden]="(!isSubmitted) || (f.controls.termsAccepted && data.termsAccepted)" class="note-danger">
+         <div [hidden]="(!isSubmitted) || (f.controls.termsAccepted && data.termsAccepted)" class="note-danger">
            Você deve concordar com os termos e condições!
         </div>
-
      </ion-list>
-
-     <div class="center">
-        <button ion-button type="submit" round outline (click)="Enviar()">Enviar</button>
-        <button ion-button block color="Green" (click)="ParaThankyou()">Thank You</button>
-     </div>
-
+      <div class="center">
+        <button ion-button type="submit" round outline (click)="Enviar()">Enviar</button>   
+        <button ion-button block color="secondary" (click)="ParaThankyou()">Thank You</button>  
+      </div>
   </form>
+<br><br><br><br>
 </ion-content>
