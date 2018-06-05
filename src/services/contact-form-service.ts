@@ -1,4 +1,5 @@
 import { Injectable } from '@angular/core';
+import { HttpClient } from '@angular/common/http';
 
 @Injectable()
 export class ContactFormService{
@@ -8,5 +9,13 @@ export class ContactFormService{
   public comment: string = '';
   publixc 
 
-  constructor(){}
+  constructor(private http: HttpClient) {
+
+  }
+
+  gravaDados(data) {
+     this.http.put('/home/debian',data);
+     console.log('Recebido: ' + JSON.stringify(data))
+  }
+
 }

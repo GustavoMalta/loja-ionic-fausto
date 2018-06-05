@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
 import { ContactFormService } from '../../services/contact-form-service';
+import { ThankyouPage } from '../thankyou/thankyou';
 
 @Component ({
    selector: 'page-contact',
@@ -15,7 +16,7 @@ export class ContactPage {
       this.nav = nav;
       this.formData = formData;
 
-      this.data = {
+    this.data = {
          name: '',
          phone: '',
          email: '',
@@ -46,6 +47,19 @@ export class ContactPage {
 
    debug(f) {
       console.log(f);
+   }
+
+
+  ParaThankyou(){
+    this.nav.push(ThankyouPage)
+   //  console.log(codigo);
+   //  console.log(this.produtos);
+   }
+
+   Enviar(){
+
+     this.formData.gravaDados(this.data);
+    console.log("Data: " + JSON.stringify(this.data));
    }
 
 }

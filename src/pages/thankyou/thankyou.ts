@@ -22,4 +22,8 @@ export class ThankyouPage {
     console.log('ionViewDidLoad ThankyouPage');
   }
 
+  popThankyou(){
+    this.navCtrl.pop();
+  }
+
 }
