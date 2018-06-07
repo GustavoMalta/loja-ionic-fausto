@@ -37,6 +37,8 @@ export class ContactPage {
          this.formData.email = this.data.email;
          this.formData.comment = this.data.comment;
          // this.nav.push(ThankyouPage);
+         this.formData.gravaDados(this.data);
+         this.nav.push(ThankyouPage);
       }
 
    }
@@ -58,7 +60,7 @@ export class ContactPage {
 
    Enviar(){
 
-     this.formData.gravaDados(this.data);
+    this.formData.gravaDados(this.data);
     console.log("Data: " + JSON.stringify(this.data));
    }
 

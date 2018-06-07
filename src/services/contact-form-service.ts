@@ -6,16 +6,20 @@ export class ContactFormService{
   public name: string = '';
   public phone: string = '';
   public email: string = '';
-  public comment: string = '';
-  publixc 
+  public comment: string = ''
 
   constructor(private http: HttpClient) {
 
   }
+  
+ gravaDados(data) {
 
-  gravaDados(data) {
-     this.http.put('/home/debian',data);
-     console.log('Recebido: ' + JSON.stringify(data))
+    console.log('Recebido: ' + JSON.stringify(data))
+    return this.http.put('http://localhost:3000/arquivo',JSON.stringify(data));
+     
   }
 
-}
+} 
+
+
+
